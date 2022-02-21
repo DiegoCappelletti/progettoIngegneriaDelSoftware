@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pagina Oggetti</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <script src="./js/object.js"></script>
+    <script src="./js/logout.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="nome">
+            <a href="./main.html">
+                <div id="nome_collezione"></div>
+            </a>
+          </div>
+          <div class="logout" onclick="logout()">
+            <a>LogOut</a>
+          </div>
+        </div>
+    </nav>
+
+    <div class="body-container">
+
+      <div class="row">
+        <div class="column">
+          <a class="a-proj" id="crea_obj">
+            <div class="card">
+                <img class="img_card" src="./img/plus.png" alt="+">
+            </div>
+          </a>
+        </div>
+        <!-- Qui verrranno aggiunti dinamicamente gli altri oggetti-->
+      </div>
+    </div>
+
+    <!-- Modal modifica oggetto -->
+    <div class="modal-container modal-modifica">
+      <div class="modal2">
+        <label for="name">Nuovo nome:</label>
+        <p id="errore-modal"></p>
+        <input type="text" name="name" id="nuovo-nome">
+        <label for="tag">Tag:</label>
+        <div class="modal-tag">
+          <!--Vengono inseriti i tag-->
+        </div>
+        <button onclick="modificaOggetto()">Aggiorna</button>
+        <span class="modal-m-close">X</span>
+      </div>
+    </div>
+
+    <!-- Modal cancella oggetto-->
+    <div class="modal-container modal-cancella">
+      <div class="modal1">
+        <button onclick="eliminaOggetto()">Elimina Oggetto</button>
+        <span class="modal-c-close">X</span>
+      </div>
+    </div>
+
+    <input type="hidden" id="id-obj-modal">
+</body>
+</html>

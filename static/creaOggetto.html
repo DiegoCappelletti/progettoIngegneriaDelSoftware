@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Crea nuovo Oggetto</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <script type="text/javascript" src="./js/creaObj.js"></script>
+    <script src="./js/logout.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="rendo">
+                <a id="torna-indietro">
+                    <div> Torna indietro</div>
+                </a>
+            </div>
+            <div class="logout" onclick="logout()">
+                <a>LogOut</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="body-container">
+        <h1>Crea Oggetto</h1>
+        <form name="creaOggetto" id="formCrea">  
+            <div class="form-group">
+                <label>Nome: </label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nome" required>
+            </div>
+            <button type="button" class="btn btn-default" onclick="crea()">Crea nuovo Oggetto</button>
+        </form>
+        <p id="errore"></p>
+    </div>
+
+
+    <script type="text/javascript">
+        const urlParam = new URLSearchParams(window.location.search);
+        const id_coll = urlParam.get('id_coll');
+        document.getElementById('torna-indietro').setAttribute("href", "./object.html?id=" + id_coll);
+    </script>
+</body>
+</html>

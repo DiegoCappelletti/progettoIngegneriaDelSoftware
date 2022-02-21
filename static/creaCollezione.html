@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Crea collezioni</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <script type="text/javascript" src="./js/creaColl.js"></script>
+    <script src="./js/logout.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <span class="rendo">
+                <a href="./main.html">
+                    <div> Torna indietro</div>
+                </a>
+            </span>
+            <div class="logout" onclick="logout()">
+                <a>LogOut</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="body-container">
+        <h1>Crea Collezione</h1>
+        <form name="creaCollezione" id="formCrea">  
+            <div class="form-group">
+                <label>Nome: </label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nome" required>
+            </div>
+            <button type="button" class="btn btn-default" onclick="crea()">Crea nuova collezione</button>
+        </form>
+        <p id="errore"></p>
+    </div>
+
+</body>
+</html>
